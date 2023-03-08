@@ -6,7 +6,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace Player
+namespace ModWar
 {
     public class ModLoader
     {
@@ -19,9 +19,9 @@ namespace Player
             RefreshModList();
         }
 
-        public IGameStart GetGameRenderer()
+        public T Get<T>()
         {
-            return kernel.Get<IGameStart>();
+            return kernel.Get<T>();
         }
 
         public void LoadMods(params string[] modNames)
@@ -32,12 +32,24 @@ namespace Player
         public void LoadMods(IEnumerable<string> modNames)
         {
             kernel = new StandardKernel();
-            kernel.Bind<KernelBase>().ToConstant(kernel);
+            kernel.Bind<KernelBase>().ToConstant(kernel).InSingletonScope();
+            
+            List<IModConfig> configurableMods = new List<IModConfig>();
 
             foreach(string modName in modNames)
             {
-                kernel.Bind(mods[modName]).To(mods[modName]);
-                kernel.Get(mods[modName]);
+                kernel.Bind(mods[modName]).To(mods[modName]).InSingletonScope();
+                 
+                var mod = kernel.Get(mods[modName]);
+                if(mod is IModConfig modConfig)
+                {
+                    configurableMods.Add(modConfig);
+                }
+            }
+
+            foreach(var modConfig in configurableMods)
+            {
+                modConfig.Setup();
             }
         }
 

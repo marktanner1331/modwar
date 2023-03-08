@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ModWar.interfaces;
+using ModWar;
 using Moq;
 using Ninject;
 using Player;
@@ -23,21 +23,21 @@ namespace Player.Tests
 
             modLoader.LoadMods("Player.Tests");
 
-            IGameRenderer gameRenderer = modLoader.GetGameRenderer();
-            Assert.IsTrue(gameRenderer is IMocked);
+            IGameStart gameStart = modLoader.Get<IGameStart>();
+            Assert.IsTrue(gameStart is IMocked);
         }
     }
 
     [ModInjector("Player.Tests")]
     public class TestModPack
     {
-        public IGameRenderer gameRenderer;
+        public IGameStart gameStart;
 
         public TestModPack(KernelBase kernel)
         {
-            gameRenderer = new Mock<IGameRenderer>().Object;
+            gameStart = new Mock<IGameStart>().Object;
 
-            kernel.Bind<IGameRenderer>().ToConstant(gameRenderer);
+            kernel.Bind<IGameStart>().ToConstant(gameStart);
         }
     }
 }

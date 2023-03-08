@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ModWar.interfaces
+namespace ModWar
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     public class ModInjector : Attribute

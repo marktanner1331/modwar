@@ -1,5 +1,4 @@
 ﻿using ModWar;
-using ModWar.interfaces;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -7,12 +6,12 @@ using System.Text;
 
 namespace AlphaMods
 {
-    [ModInjector("Alpha Mods")]
+    [ModInjector("AlphaMods")]
     public class AlphaMods
     {
-        public AlphaMods(KernelBase kernel)
-        {
-            kernel.Bind<IGameRenderer>().To<GameRenderer>();
-        }
+        //public AlphaMods(KernelBase kernel)
+        //{
+        //    kernel.Bind<IGameStart>().To<GameRenderer>();
+        //}
     }
 }

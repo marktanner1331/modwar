@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ModWar.interfaces
+namespace ModWar
 {
-    public interface IGameRenderer
+    public interface IGameStart
     {
-
+        void Start();
     }
 }

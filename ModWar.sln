@@ -1,15 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31613.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModWar", "ModWar\ModWar.csproj", "{E3DB12B6-34C4-4215-91F1-FD0506C38670}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods", "AlphaMods\AlphaMods.csproj", "{6AE9097E-AB68-4E7F-AF3C-B969EA48E8E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Player", "Player\Player.csproj", "{50AF1995-E800-4C4B-BEDF-815E51CC875B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayerTests", "PlayerTests\PlayerTests.csproj", "{0C010759-76F3-456A-8FC9-47159062E5EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerTests", "PlayerTests\PlayerTests.csproj", "{0C010759-76F3-456A-8FC9-47159062E5EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Renderer.Interfaces", "AlphaMods.Renderer.Interfaces\AlphaMods.Renderer.Interfaces.csproj", "{C90E5D07-E918-4597-B09F-B04869251B35}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.GameEngine.Interfaces", "AlphaMods.GameEngine.Interfaces\AlphaMods.GameEngine.Interfaces.csproj", "{A623593B-1605-4618-A454-FD7DE4FF9D9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.GameEngine.Core", "AlphaMods.GameEngine.Core\AlphaMods.GameEngine.Core.csproj", "{2E905BDD-13C8-4AEE-8F42-7CA66776A7BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Hud.Interfaces", "AlphaMods.Hud.Interfaces\AlphaMods.Hud.Interfaces.csproj", "{F65069CD-A440-4C4F-8540-CC97C564B5BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Hud.Core", "AlphaMods.Hud.Core\AlphaMods.Hud.Core.csproj", "{AE1C1913-9132-47E9-8968-963B7F0CDBE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Renderer.MonoGame", "AlphaMods.Renderer.MonoGame\AlphaMods.Renderer.MonoGame.csproj", "{5E73B2B5-E404-41D9-A494-1403DF123097}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModWar.Player", "ModWar.Player\ModWar.Player.csproj", "{6AAD92C3-E501-4330-B8C8-AACB2CACD4EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.MapController.Core", "AlphaMods.MapController.Core\AlphaMods.MapController.Core.csproj", "{26D6DEAC-067F-4F4B-8DC6-FF4CCBAF0F0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaMods.Maps.EmptyMap.MonoGame", "AlphaMods.Maps.EmptyMap.MonoGame\AlphaMods.Maps.EmptyMap.MonoGame.csproj", "{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +41,46 @@ Global
 		{6AE9097E-AB68-4E7F-AF3C-B969EA48E8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AE9097E-AB68-4E7F-AF3C-B969EA48E8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AE9097E-AB68-4E7F-AF3C-B969EA48E8E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{50AF1995-E800-4C4B-BEDF-815E51CC875B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50AF1995-E800-4C4B-BEDF-815E51CC875B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50AF1995-E800-4C4B-BEDF-815E51CC875B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50AF1995-E800-4C4B-BEDF-815E51CC875B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0C010759-76F3-456A-8FC9-47159062E5EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0C010759-76F3-456A-8FC9-47159062E5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C010759-76F3-456A-8FC9-47159062E5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C010759-76F3-456A-8FC9-47159062E5EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C90E5D07-E918-4597-B09F-B04869251B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C90E5D07-E918-4597-B09F-B04869251B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C90E5D07-E918-4597-B09F-B04869251B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C90E5D07-E918-4597-B09F-B04869251B35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A623593B-1605-4618-A454-FD7DE4FF9D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A623593B-1605-4618-A454-FD7DE4FF9D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A623593B-1605-4618-A454-FD7DE4FF9D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A623593B-1605-4618-A454-FD7DE4FF9D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E905BDD-13C8-4AEE-8F42-7CA66776A7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E905BDD-13C8-4AEE-8F42-7CA66776A7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E905BDD-13C8-4AEE-8F42-7CA66776A7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E905BDD-13C8-4AEE-8F42-7CA66776A7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F65069CD-A440-4C4F-8540-CC97C564B5BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65069CD-A440-4C4F-8540-CC97C564B5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65069CD-A440-4C4F-8540-CC97C564B5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65069CD-A440-4C4F-8540-CC97C564B5BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1C1913-9132-47E9-8968-963B7F0CDBE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1C1913-9132-47E9-8968-963B7F0CDBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1C1913-9132-47E9-8968-963B7F0CDBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1C1913-9132-47E9-8968-963B7F0CDBE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E73B2B5-E404-41D9-A494-1403DF123097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E73B2B5-E404-41D9-A494-1403DF123097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E73B2B5-E404-41D9-A494-1403DF123097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E73B2B5-E404-41D9-A494-1403DF123097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AAD92C3-E501-4330-B8C8-AACB2CACD4EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AAD92C3-E501-4330-B8C8-AACB2CACD4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AAD92C3-E501-4330-B8C8-AACB2CACD4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AAD92C3-E501-4330-B8C8-AACB2CACD4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26D6DEAC-067F-4F4B-8DC6-FF4CCBAF0F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26D6DEAC-067F-4F4B-8DC6-FF4CCBAF0F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26D6DEAC-067F-4F4B-8DC6-FF4CCBAF0F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26D6DEAC-067F-4F4B-8DC6-FF4CCBAF0F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

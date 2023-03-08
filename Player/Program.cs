@@ -7,10 +7,9 @@ namespace Player
         static void Main(string[] args)
         {
             ModLoader loader = new ModLoader();
-            loader.LoadMods("Alpha Mods");
+            loader.LoadMods("AlphaMods");
 
-            Player player = new Player(loader.GetGameRenderer());
-            player.Run();
+            Player player = new Player();
         }
     }
 }

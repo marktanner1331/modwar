@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AlphaMods.GameEngine.Core\AlphaMods.GameEngine.Core.csproj" />
+    <ProjectReference Include="..\AlphaMods.Hud.Core\AlphaMods.Hud.Core.csproj" />
+    <ProjectReference Include="..\AlphaMods.Maps.EmptyMap.MonoGame\AlphaMods.Maps.EmptyMap.MonoGame.csproj" />
+    <ProjectReference Include="..\AlphaMods.Renderer.MonoGame\AlphaMods.Renderer.MonoGame.csproj" />
+    <ProjectReference Include="..\ModWar\ModWar.csproj" />
+  </ItemGroup>
+
+</Project>

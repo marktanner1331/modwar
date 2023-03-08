@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Player\Player.csproj" />
+    <ProjectReference Include="..\ModWar\ModWar.csproj" />
   </ItemGroup>
 
 </Project>

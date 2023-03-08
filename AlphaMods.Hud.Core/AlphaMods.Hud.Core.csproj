@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AlphaMods.Hud.Interfaces\AlphaMods.Hud.Interfaces.csproj" />
+    <ProjectReference Include="..\AlphaMods.Renderer.Interfaces\AlphaMods.Renderer.Interfaces.csproj" />
+    <ProjectReference Include="..\ModWar\ModWar.csproj" />
+  </ItemGroup>
+
+</Project>
