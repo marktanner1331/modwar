@@ -69,7 +69,7 @@ namespace ModWar
 
             foreach(string file in Directory.EnumerateFiles(binFolder, "*.dll"))
             {
-                Assembly assembly = Assembly.LoadFile(file);
+                Assembly assembly = Assembly.LoadFrom(file);
                 
                 foreach(Type type in assembly.GetExportedTypes())
                 {
