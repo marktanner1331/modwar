@@ -1,23 +1,49 @@
-﻿using AlphaMods.Renderer.Interfaces;
-using Microsoft.Xna.Framework;
-using static AlphaMods.Renderer.Interfaces.IRenderer;
+﻿using Microsoft.Xna.Framework;
+using ModWar;
 
-namespace AlphaMods.Renderer.MonoGame
+namespace AlphaMods.Renderer.TopDown.MonoGame
 {
-    public class MonoGameRenderer : Game, IRenderer
+    public delegate void Render();
+
+    public class MonoGameRenderer : Game, IGameStart
     {
         private List<Tuple<LayerDepth, IRenderLayer>> _layers;
         private Render? _root;
 
-        private GraphicsDeviceManager _graphics;
+        public GraphicsDeviceManager Graphics;
 
-        public Guid id = Guid.NewGuid();
+        public int MapWidth;
+        public int MapHeight;
 
         public MonoGameRenderer()
         {
             _layers = new List<Tuple<LayerDepth, IRenderLayer>>();
-            _graphics = new GraphicsDeviceManager(this);
+            Graphics = new GraphicsDeviceManager(this);
             IsMouseVisible = true;
+        }
+
+        /// <summary>
+        /// returns the area of the screen that the game should render to
+        /// </summary>
+        public Rectangle GetGameBounds()
+        {
+            return new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+        }
+
+        /// <summary>
+        /// returns the area of the map that should be rendered
+        /// </summary>
+        public Rectangle GetMapArea()
+        {
+            double xScale = (double)GraphicsDevice.Viewport.Width / MapWidth;
+            double yScale = (double)GraphicsDevice.Viewport.Height / MapHeight;
+            double scale = Math.Max(xScale, yScale);
+
+            return new Rectangle(
+                0,
+                0,
+                (int)(GraphicsDevice.Viewport.Width * scale),
+                (int)(GraphicsDevice.Viewport.Height * scale));
         }
 
         public void AddLayer(IRenderLayer layer, LayerDepth layerDepth)
@@ -26,11 +52,11 @@ namespace AlphaMods.Renderer.MonoGame
             _layers.Sort((x, y) => x.Item1 - y.Item1);
         }
 
-        public void RenderGame()
+        public void RenderMainGameLayers()
         {
             foreach (var layer in _layers)
             {
-                layer.Item2.RenderGame();
+                layer.Item2.RenderMainGameLayer();
             }
         }
 
@@ -38,7 +64,7 @@ namespace AlphaMods.Renderer.MonoGame
         {
             foreach (var layer in _layers)
             {
-                layer.Item2.RenderMinimap();
+                layer.Item2.RenderMinimapLayer();
             }
         }
 

@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AlphaMods.Renderer.Interfaces\AlphaMods.Renderer.Interfaces.csproj" />
     <ProjectReference Include="..\ModWar\ModWar.csproj" />
   </ItemGroup>
 

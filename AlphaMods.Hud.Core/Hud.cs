@@ -1,20 +1,20 @@
-﻿using AlphaMods.Hud.Interfaces;
-using AlphaMods.Renderer.Interfaces;
+﻿using AlphaMods.Renderer.TopDown.MonoGame;
 
 namespace AlphaMods.Hud.Core
 {
-    public class Hud : IHud
+    public class Hud
     {
-        private IRenderer renderer;
+        private MonoGameRenderer renderer;
 
-        public Hud(IRenderer renderer)
+        public Hud(MonoGameRenderer renderer)
         {
             this.renderer = renderer;
+            this.renderer.SetRoot(this.Render);
         }
 
         public void Render()
         {
-            renderer.RenderGame();
+            renderer.RenderMainGameLayers();
         }
     }
 }

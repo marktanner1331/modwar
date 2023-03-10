@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ModWar
+namespace ModWar.Interfaces.Config
 {
-    public interface IModConfig
+    public interface ISetup
     {
         void Setup();
     }

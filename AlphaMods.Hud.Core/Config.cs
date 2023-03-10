@@ -1,6 +1,5 @@
-﻿using AlphaMods.Hud.Interfaces;
-using AlphaMods.Renderer.Interfaces;
-using ModWar;
+﻿using ModWar;
+using ModWar.Interfaces.Config;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -11,19 +10,20 @@ using System.Threading.Tasks;
 namespace AlphaMods.Hud.Core
 {
     [ModInjector("AlphaMods.Hud.Core")]
-    public class Config : IModConfig
+    public class Config : ISetup
     {
         private KernelBase kernel;
 
         public Config(KernelBase kernel)
         {
             this.kernel = kernel;
-            kernel.Bind<IHud>().To<Hud>().InSingletonScope();
+            kernel.Bind<Hud>().ToSelf().InSingletonScope();
         }
 
         public void Setup()
         {
-            kernel.Get<IRenderer>().SetRoot(kernel.Get<IHud>().Render);
+            //run the constructor
+            kernel.Get<Hud>();
         }
     }
 }

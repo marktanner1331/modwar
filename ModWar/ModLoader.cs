@@ -1,4 +1,5 @@
 ﻿using ModWar;
+using ModWar.Interfaces.Config;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -34,22 +35,22 @@ namespace ModWar
             kernel = new StandardKernel();
             kernel.Bind<KernelBase>().ToConstant(kernel).InSingletonScope();
             
-            List<IModConfig> configurableMods = new List<IModConfig>();
+            List<ISetup> setups = new List<ISetup>();
 
             foreach(string modName in modNames)
             {
                 kernel.Bind(mods[modName]).To(mods[modName]).InSingletonScope();
                  
                 var mod = kernel.Get(mods[modName]);
-                if(mod is IModConfig modConfig)
+                if(mod is ISetup setup)
                 {
-                    configurableMods.Add(modConfig);
+                    setups.Add(setup);
                 }
             }
 
-            foreach(var modConfig in configurableMods)
+            foreach(var setup in setups)
             {
-                modConfig.Setup();
+                setup.Setup();
             }
         }
 

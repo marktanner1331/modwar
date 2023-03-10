@@ -1,11 +1,11 @@
-﻿using AlphaMods.Renderer.Interfaces;
-using ModWar;
+﻿using ModWar;
+using ModWar.Interfaces.Config;
 using Ninject;
 
 namespace AlphaMods.Maps.EmptyMap.MonoGame
 {
     [ModInjector("AlphaMods.Maps.EmptyMap.MonoGame")]
-    public class Config : IModConfig
+    public class Config : ISetup
     {
         private KernelBase kernel;
 
@@ -17,8 +17,7 @@ namespace AlphaMods.Maps.EmptyMap.MonoGame
 
         public void Setup()
         {
-            IRenderer renderer = kernel.Get<IRenderer>();
-            renderer.AddLayer(kernel.Get<MapRenderer>(), LayerDepth.GROUND);
+            kernel.Get<MapRenderer>();
         }
 
     }

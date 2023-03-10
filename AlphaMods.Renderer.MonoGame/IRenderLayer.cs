@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlphaMods.Renderer.Interfaces
+namespace AlphaMods.Renderer.TopDown.MonoGame
 {
     public interface IRenderLayer
     {

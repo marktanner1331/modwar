@@ -9,9 +9,8 @@ namespace ModWar.Player
         {
             ModLoader loader = new ModLoader();
             loader.LoadMods(
-                "AlphaMods.GameEngine.Core",
                 "AlphaMods.Hud.Core",
-                "AlphaMods.Renderer.MonoGame",
+                "AlphaMods.Renderer.TopDown.MonoGame",
                 "AlphaMods.Maps.EmptyMap.MonoGame");
             loader.Get<IGameStart>().Start();
         }

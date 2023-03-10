@@ -7,7 +7,7 @@
         void Start();
         void AddLayer(IRenderLayer layer, LayerDepth layerDepth);
         void SetRoot(Render root);
-        void RenderGame();
+        void RenderMainGameLayers();
         void RenderMinimap();
     }
 }

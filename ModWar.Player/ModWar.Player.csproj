@@ -8,10 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AlphaMods.GameEngine.Core\AlphaMods.GameEngine.Core.csproj" />
     <ProjectReference Include="..\AlphaMods.Hud.Core\AlphaMods.Hud.Core.csproj" />
     <ProjectReference Include="..\AlphaMods.Maps.EmptyMap.MonoGame\AlphaMods.Maps.EmptyMap.MonoGame.csproj" />
-    <ProjectReference Include="..\AlphaMods.Renderer.MonoGame\AlphaMods.Renderer.MonoGame.csproj" />
+    <ProjectReference Include="..\AlphaMods.Renderer.MonoGame\AlphaMods.Renderer.TopDown.MonoGame.csproj" />
     <ProjectReference Include="..\ModWar\ModWar.csproj" />
   </ItemGroup>
 
