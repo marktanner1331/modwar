@@ -9,13 +9,35 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods", "AlphaMods\Alph
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayerTests", "PlayerTests\PlayerTests.csproj", "{0C010759-76F3-456A-8FC9-47159062E5EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Hud.Core", "AlphaMods.Hud.Core\AlphaMods.Hud.Core.csproj", "{AE1C1913-9132-47E9-8968-963B7F0CDBE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Hud.Layered.MonoGame", "AlphaMods.Hud.Layered.MonoGame\AlphaMods.Hud.Layered.MonoGame.csproj", "{AE1C1913-9132-47E9-8968-963B7F0CDBE8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Renderer.TopDown.MonoGame", "AlphaMods.Renderer.MonoGame\AlphaMods.Renderer.TopDown.MonoGame.csproj", "{5E73B2B5-E404-41D9-A494-1403DF123097}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Renderer.Layered.MonoGame", "AlphaMods.Renderer.Layered.MonoGame\AlphaMods.Renderer.Layered.MonoGame.csproj", "{5E73B2B5-E404-41D9-A494-1403DF123097}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModWar.Player", "ModWar.Player\ModWar.Player.csproj", "{6AAD92C3-E501-4330-B8C8-AACB2CACD4EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Maps.EmptyMap.MonoGame", "AlphaMods.Maps.EmptyMap.MonoGame\AlphaMods.Maps.EmptyMap.MonoGame.csproj", "{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Maps.EmptyMap.TopDown.MonoGame", "AlphaMods.Maps.EmptyMap.TopDown.MonoGame\AlphaMods.Maps.EmptyMap.TopDown.MonoGame.csproj", "{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.UnitController.Interfaces", "AlphaMods.UnitController.Interfaces\AlphaMods.UnitController.Interfaces.csproj", "{B8CB31B2-0D0F-42F4-A0A6-35E4CE5C2B24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Units.CircleTank.TopDown.MonoGame", "AlphaMods.Units.CircleTank.TopDown.MonoGame\AlphaMods.Units.CircleTank.TopDown.MonoGame.csproj", "{385101AE-50ED-4721-A7D5-70A762EBD478}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlphaMods.Utility.CommandDispatcher.Interfaces", "AlphaMods.Utility.CommandDispatcher.Interfaces\AlphaMods.Utility.CommandDispatcher.Interfaces.csproj", "{1B7B9555-B943-40A3-AB40-A567E437F0C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaMods.UnitController.Core", "AlphaMods.UnitController.Core\AlphaMods.UnitController.Core.csproj", "{B77306A0-EFEF-46FC-AACD-0400278D5F60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaMods.Misc.StartingUnits", "AlphaMods.Misc.StartingUnits\AlphaMods.Misc.StartingUnits.csproj", "{02FB5757-3477-4959-A380-505B3BF379A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaMods.PlayerController.Interfaces", "AlphaMods.PlayerController.Interfaces\AlphaMods.PlayerController.Interfaces.csproj", "{82681F1E-AE53-4E3A-ACE8-DB559B531E72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaMods.PlayerController.Core", "AlphaMods.PlayerController.Core\AlphaMods.PlayerController.Core.csproj", "{C26F639D-1E83-49C9-B78B-7B77443F9267}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaMods.Maps.MapController.Interfaces", "AlphaMods.Maps.MapController.Interfaces\AlphaMods.Maps.MapController.Interfaces.csproj", "{BF61E0FD-B2AC-461C-9A1A-7521603DBEA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaMods.Utility.CommandDispatcher.Core", "AlphaMods.Utility.CommandDispatcher.Core\AlphaMods.Utility.CommandDispatcher.Core.csproj", "{7AAB1D4D-F22E-4B07-9FB6-47848B375A41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaMods.AI.UnitFormation.Interfaces", "AlphaMods.AI.UnitFormation.Interfaces\AlphaMods.AI.UnitFormation.Interfaces.csproj", "{F6EDC723-740F-4ABE-94EA-9A36DD03BAA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphaMods.AI.UnitFormation.Core", "AlphaMods.AI.UnitFormation.Core\AlphaMods.AI.UnitFormation.Core.csproj", "{29B40410-7863-46B5-A9F8-18FCA968B0D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +73,50 @@ Global
 		{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C0C785D-B79B-4402-9BF1-A44E5A4E6FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8CB31B2-0D0F-42F4-A0A6-35E4CE5C2B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CB31B2-0D0F-42F4-A0A6-35E4CE5C2B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CB31B2-0D0F-42F4-A0A6-35E4CE5C2B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CB31B2-0D0F-42F4-A0A6-35E4CE5C2B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{385101AE-50ED-4721-A7D5-70A762EBD478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{385101AE-50ED-4721-A7D5-70A762EBD478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385101AE-50ED-4721-A7D5-70A762EBD478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{385101AE-50ED-4721-A7D5-70A762EBD478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7B9555-B943-40A3-AB40-A567E437F0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7B9555-B943-40A3-AB40-A567E437F0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7B9555-B943-40A3-AB40-A567E437F0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7B9555-B943-40A3-AB40-A567E437F0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77306A0-EFEF-46FC-AACD-0400278D5F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77306A0-EFEF-46FC-AACD-0400278D5F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77306A0-EFEF-46FC-AACD-0400278D5F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77306A0-EFEF-46FC-AACD-0400278D5F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02FB5757-3477-4959-A380-505B3BF379A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02FB5757-3477-4959-A380-505B3BF379A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02FB5757-3477-4959-A380-505B3BF379A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02FB5757-3477-4959-A380-505B3BF379A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82681F1E-AE53-4E3A-ACE8-DB559B531E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82681F1E-AE53-4E3A-ACE8-DB559B531E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82681F1E-AE53-4E3A-ACE8-DB559B531E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82681F1E-AE53-4E3A-ACE8-DB559B531E72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C26F639D-1E83-49C9-B78B-7B77443F9267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C26F639D-1E83-49C9-B78B-7B77443F9267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C26F639D-1E83-49C9-B78B-7B77443F9267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C26F639D-1E83-49C9-B78B-7B77443F9267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF61E0FD-B2AC-461C-9A1A-7521603DBEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF61E0FD-B2AC-461C-9A1A-7521603DBEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF61E0FD-B2AC-461C-9A1A-7521603DBEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF61E0FD-B2AC-461C-9A1A-7521603DBEA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AAB1D4D-F22E-4B07-9FB6-47848B375A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AAB1D4D-F22E-4B07-9FB6-47848B375A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AAB1D4D-F22E-4B07-9FB6-47848B375A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AAB1D4D-F22E-4B07-9FB6-47848B375A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6EDC723-740F-4ABE-94EA-9A36DD03BAA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6EDC723-740F-4ABE-94EA-9A36DD03BAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6EDC723-740F-4ABE-94EA-9A36DD03BAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6EDC723-740F-4ABE-94EA-9A36DD03BAA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B40410-7863-46B5-A9F8-18FCA968B0D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B40410-7863-46B5-A9F8-18FCA968B0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B40410-7863-46B5-A9F8-18FCA968B0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B40410-7863-46B5-A9F8-18FCA968B0D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

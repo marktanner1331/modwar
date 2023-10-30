@@ -9,9 +9,15 @@ namespace ModWar.Player
         {
             ModLoader loader = new ModLoader();
             loader.LoadMods(
-                "AlphaMods.Hud.Core",
-                "AlphaMods.Renderer.TopDown.MonoGame",
-                "AlphaMods.Maps.EmptyMap.MonoGame");
+                "AlphaMods.Hud.Layered.MonoGame",
+                "AlphaMods.Renderer.Layered.MonoGame",
+                "AlphaMods.Maps.EmptyMap.TopDown.MonoGame",
+                "AlphaMods.UnitController.Core",
+                "AlphaMods.Units.CircleTank.TopDown.MonoGame",
+                "AlphaMods.Misc.StartingUnits",
+                "AlphaMods.PlayerController.Core",
+                "AlphaMods.Utility.CommandDispatcher.Core",
+                "AlphaMods.AI.UnitFormation.Core");
             loader.Get<IGameStart>().Start();
         }
     }

@@ -8,9 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AlphaMods.Hud.Core\AlphaMods.Hud.Core.csproj" />
-    <ProjectReference Include="..\AlphaMods.Maps.EmptyMap.MonoGame\AlphaMods.Maps.EmptyMap.MonoGame.csproj" />
-    <ProjectReference Include="..\AlphaMods.Renderer.MonoGame\AlphaMods.Renderer.TopDown.MonoGame.csproj" />
+    <ProjectReference Include="..\AlphaMods.AI.UnitFormation.Core\AlphaMods.AI.UnitFormation.Core.csproj" />
+    <ProjectReference Include="..\AlphaMods.Hud.Layered.MonoGame\AlphaMods.Hud.Layered.MonoGame.csproj" />
+    <ProjectReference Include="..\AlphaMods.Maps.EmptyMap.TopDown.MonoGame\AlphaMods.Maps.EmptyMap.TopDown.MonoGame.csproj" />
+    <ProjectReference Include="..\AlphaMods.Misc.StartingUnits\AlphaMods.Misc.StartingUnits.csproj" />
+    <ProjectReference Include="..\AlphaMods.PlayerController.Core\AlphaMods.PlayerController.Core.csproj" />
+    <ProjectReference Include="..\AlphaMods.Renderer.Layered.MonoGame\AlphaMods.Renderer.Layered.MonoGame.csproj" />
+    <ProjectReference Include="..\AlphaMods.UnitController.Core\AlphaMods.UnitController.Core.csproj" />
+    <ProjectReference Include="..\AlphaMods.Units.CircleTank.TopDown.MonoGame\AlphaMods.Units.CircleTank.TopDown.MonoGame.csproj" />
+    <ProjectReference Include="..\AlphaMods.Utility.CommandDispatcher.Core\AlphaMods.Utility.CommandDispatcher.Core.csproj" />
     <ProjectReference Include="..\ModWar\ModWar.csproj" />
   </ItemGroup>
 

@@ -34,23 +34,31 @@ namespace ModWar
         {
             kernel = new StandardKernel();
             kernel.Bind<KernelBase>().ToConstant(kernel).InSingletonScope();
-            
-            List<ISetup> setups = new List<ISetup>();
 
-            foreach(string modName in modNames)
+            List<object> modConfigs = new List<object>();
+
+            foreach (string modName in modNames)
             {
                 kernel.Bind(mods[modName]).To(mods[modName]).InSingletonScope();
                  
                 var mod = kernel.Get(mods[modName]);
+                modConfigs.Add(mod);
+            }
+
+            foreach(var mod in modConfigs)
+            {
                 if(mod is ISetup setup)
                 {
-                    setups.Add(setup);
+                    setup.Setup();
                 }
             }
 
-            foreach(var setup in setups)
+            foreach (var mod in modConfigs)
             {
-                setup.Setup();
+                if (mod is IBeforeStart beforeStart)
+                {
+                    beforeStart.BeforeStart();
+                }
             }
         }
 
